@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kristian Dahlmann Oddershede | At Være Ung</title>
   <meta name="description" content="Kristian Dahlmann Oddershede — volunteer leader at At Være Ung, a youth-focused volunteer organisation.">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
   <style>
     :root {
       --primary: #2563eb;
@@ -56,7 +60,7 @@
       align-items: center;
       justify-content: flex-start;
       min-height: 100vh;
-      padding: 7rem 1rem 2rem; /* spacing below header */
+      padding: 7rem 1rem 2rem;
       max-width: 700px;
       margin: 0 auto;
     }
@@ -83,19 +87,43 @@
     }
 
     a.button {
-      display: inline-block;
-      background-color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       color: white;
       padding: 0.75rem 1.25rem;
       border-radius: 0.5rem;
       text-decoration: none;
       font-weight: 500;
-      transition: background-color 0.2s ease-in-out;
+      transition: transform 0.2s ease, filter 0.2s ease;
       margin: 0.25rem;
     }
 
     a.button:hover {
-      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
+
+    /* Contact button layout */
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    /* Individual platform styles */
+    .button.email {
+      background-color: var(--primary);
+    }
+
+    .button.instagram {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    }
+
+    .button.linkedin {
+      background-color: #0a66c2;
     }
 
     footer {
@@ -123,23 +151,25 @@
       Visit At Være Ung
     </a>
 
-    <h2>Contact information</h2>
+    <h2>Contact Information</h2>
     <p>
       You can reach me through different platforms — whether for collaboration, volunteering,
       or just to connect and share ideas. Feel free to get in touch on social media.
     </p>
 
-    <a class="button" href="mailto:kristian.possum@gmail.com" target="_blank" rel="noopener noreferrer">
-      E-mail
-    </a>
+    <div class="contact-buttons">
+      <a class="button email" href="mailto:kristian.possum@gmail.com" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="mail"></i> E-mail
+      </a>
 
-    <a class="button" href="https://www.instagram.com/kristianoddershede/" target="_blank" rel="noopener noreferrer">
-      Instagram
-    </a>
+      <a class="button instagram" href="https://www.instagram.com/kristianoddershede/" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="instagram"></i> Instagram
+      </a>
 
-    <a class="button" href="https://www.linkedin.com/in/kristian-dahlmann-oddershede-b5703a217/" target="_blank" rel="noopener noreferrer">
-      LinkedIn
-    </a>
+      <a class="button linkedin" href="https://www.linkedin.com/in/kristian-dahlmann-oddershede-b5703a217/" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="linkedin"></i> LinkedIn
+      </a>
+    </div>
   </main>
 
   <footer>
@@ -149,6 +179,8 @@
   <script>
     // Automatically update footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+    // Load Lucide icons
+    lucide.createIcons();
   </script>
 </body>
 </html>

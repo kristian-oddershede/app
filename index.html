@@ -3,39 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristian | At Være Ung</title>
-  <meta name="description" content="Kristian's personal page — volunteer leader at At Være Ung, a youth-focused volunteer organisation.">
+  <title>Kristian Dahlmann Oddershede | At Være Ung</title>
+  <meta name="description" content="Kristian Dahlmann Oddershede — volunteer leader at At Være Ung, a youth-focused volunteer organisation.">
   <style>
     :root {
       --primary: #2563eb;
       --primary-hover: #1d4ed8;
       --bg: #f9fafb;
       --text: #111827;
+      --muted: #6b7280;
     }
 
     body {
       font-family: system-ui, sans-serif;
       background-color: var(--bg);
       color: var(--text);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8px);
+    }
+
+    header img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    header span {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       min-height: 100vh;
-      margin: 0;
-      padding: 1rem;
-      text-align: center;
+      padding: 7rem 1rem 2rem; /* spacing below header */
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
     }
 
     h1 {
       font-size: 2rem;
-      margin-bottom: 0.5rem;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
     }
 
     p {
-      max-width: 600px;
       line-height: 1.6;
       margin: 0.5rem 0 1.5rem;
+      color: var(--text);
     }
 
     a.button {
@@ -47,6 +91,7 @@
       text-decoration: none;
       font-weight: 500;
       transition: background-color 0.2s ease-in-out;
+      margin: 0.25rem;
     }
 
     a.button:hover {
@@ -56,15 +101,20 @@
     footer {
       margin-top: 2rem;
       font-size: 0.9rem;
-      color: #6b7280;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQFedcv9opN3wA/profile-displayphoto-crop_800_800/B56ZgtcoLjHkAM-/0/1753109138403?e=1762387200&v=beta&t=LU4zp5fQxHffhGUjknk4jGSxheSWRdaXZ0GZGsXOcZ0" alt="Kristian Dahlmann Oddershede profile photo" />
+    <span>Kristian Dahlmann Oddershede</span>
+  </header>
+
   <main>
-    <h1>Hi, I’m Kristian 👋</h1>
+    <h1>Volunteer Organisation</h1>
     <p>
-      I’m passionate about youth engagement and community building. I manage
+      I’m Kristian, passionate about youth engagement and community building. I manage
       <strong>At Være Ung</strong> — a volunteer organisation that creates meaningful opportunities
       for young people to connect, grow, and make a positive impact.
     </p>
@@ -72,10 +122,24 @@
     <a class="button" href="https://atværeung.dk" target="_blank" rel="noopener noreferrer">
       Visit At Være Ung
     </a>
+
+    <h2>Contacts</h2>
+    <p>
+      You can reach me through different platforms — whether for collaboration, volunteering,
+      or just to connect and share ideas. Feel free to get in touch on social media.
+    </p>
+
+    <a class="button" href="https://www.linkedin.com/in/kristian-dahlmann-oddershede-b5703a217/" target="_blank" rel="noopener noreferrer">
+      LinkedIn
+    </a>
+
+    <a class="button" href="https://www.instagram.com/kristianoddershede/" target="_blank" rel="noopener noreferrer">
+      Instagram
+    </a>
   </main>
 
   <footer>
-    © <span id="year"></span> Kristian — All rights reserved.
+    © <span id="year"></span> Kristian Dahlmann Oddershede — All rights reserved.
   </footer>
 
   <script>

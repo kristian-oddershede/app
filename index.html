@@ -3,35 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Private App Page</title>
+  <title>Kristian | At Være Ung</title>
+  <meta name="description" content="Kristian's personal page — volunteer leader at At Være Ung, a youth-focused volunteer organisation.">
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg: #f9fafb;
+      --text: #111827;
+    }
+
     body {
       font-family: system-ui, sans-serif;
-      background: #f3f4f6;
-      color: #111;
+      background-color: var(--bg);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1rem;
       text-align: center;
     }
-    h1 { font-size: 2rem; }
-    a {
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      max-width: 600px;
+      line-height: 1.6;
+      margin: 0.5rem 0 1.5rem;
+    }
+
+    a.button {
       display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background: #2563eb;
+      background-color: var(--primary);
       color: white;
+      padding: 0.75rem 1.25rem;
       border-radius: 0.5rem;
       text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.2s ease-in-out;
     }
-    a:hover { background: #1d4ed8; }
+
+    a.button:hover {
+      background-color: var(--primary-hover);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
   </style>
 </head>
 <body>
-  <h1>Hello from my private app by Kristian!</h1>
-  <p>This is my test page hosted for free on GitHub Pages.</p>
-  <a href="https://www.example.com" target="_blank">Go to Example Website</a>
+  <main>
+    <h1>Hi, I’m Kristian 👋</h1>
+    <p>
+      I’m passionate about youth engagement and community building. I manage
+      <strong>At Være Ung</strong> — a volunteer organisation that creates meaningful opportunities
+      for young people to connect, grow, and make a positive impact.
+    </p>
+
+    <a class="button" href="https://atværeung.dk" target="_blank" rel="noopener noreferrer">
+      Visit At Være Ung
+    </a>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Kristian — All rights reserved.
+  </footer>
+
+  <script>
+    // Automatically update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
